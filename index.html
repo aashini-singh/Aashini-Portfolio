@@ -22,7 +22,7 @@
     >
 
 
-    <!-- Font Awesome Icons -->
+    <!-- Font Awesome -->
 
     <link
         rel="stylesheet"
@@ -40,7 +40,7 @@
 <body>
 
 
-    <!-- ================= NAVIGATION ================= -->
+    <!-- ================= NAVBAR ================= -->
 
     <header class="navbar">
 
@@ -49,16 +49,14 @@
 
             <!-- Logo -->
 
-             <a href="#home" class="logo">
-
+            <a href="#home" class="logo">
                 <span>Aashini</span>
-
             </a>
 
 
             <!-- Navigation -->
 
-            <nav class="nav-menu">
+            <nav class="nav-menu" id="navMenu">
 
                 <a href="#home" class="nav-link">
                     Home
@@ -78,20 +76,50 @@
 
             </nav>
 
+
+            <!-- Right Side Controls -->
+
+            <div class="nav-controls">
+
+                <!-- Dark / Light Mode -->
+
+                <button
+                    id="themeToggle"
+                    class="theme-toggle"
+                    aria-label="Toggle dark mode"
+                >
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+
+                <!-- Mobile Menu -->
+
+                <button
+                    id="menuToggle"
+                    class="menu-toggle"
+                    aria-label="Open navigation menu"
+                >
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+            </div>
+
         </div>
 
     </header>
 
 
 
-    <!-- ================= HERO SECTION ================= -->
+    <!-- ================= HERO ================= -->
 
     <section id="home" class="hero">
 
         <div class="container hero-container">
 
-
-            <!-- Hero Text -->
 
             <div class="hero-content">
 
@@ -122,7 +150,11 @@
 
                 <div class="hero-buttons">
 
-                    <a href="#contact" class="btn primary-btn">
+
+                    <a
+                        href="#contact"
+                        class="btn primary-btn"
+                    >
 
                         Contact Me
 
@@ -148,8 +180,7 @@
             </div>
 
 
-
-            <!-- Profile Image -->
+            <!-- Profile -->
 
             <div class="hero-image">
 
@@ -170,9 +201,9 @@
 
 
 
-    <!-- ================= ABOUT SECTION ================= -->
+    <!-- ================= ABOUT ================= -->
 
-    <section id="about" class="section">
+    <section id="about" class="section reveal">
 
         <div class="container">
 
@@ -225,6 +256,7 @@
 
                 <div class="about-highlight">
 
+
                     <div class="highlight-box">
 
                         <i class="fa-solid fa-code"></i>
@@ -264,9 +296,9 @@
 
 
 
-    <!-- ================= SKILLS SECTION ================= -->
+    <!-- ================= SKILLS ================= -->
 
-    <section id="skills" class="section skills-section">
+    <section id="skills" class="section skills-section reveal">
 
         <div class="container">
 
@@ -287,19 +319,13 @@
             <div class="skills-grid">
 
 
-                <!-- HTML -->
-
                 <div class="skill-card">
 
                     <div class="skill-icon">
-
                         <i class="fa-brands fa-html5"></i>
-
                     </div>
 
-                    <h3>
-                        HTML
-                    </h3>
+                    <h3>HTML</h3>
 
                     <p>
                         Creating structured and semantic web pages.
@@ -308,19 +334,14 @@
                 </div>
 
 
-                <!-- CSS -->
 
                 <div class="skill-card">
 
                     <div class="skill-icon">
-
                         <i class="fa-brands fa-css3-alt"></i>
-
                     </div>
 
-                    <h3>
-                        CSS
-                    </h3>
+                    <h3>CSS</h3>
 
                     <p>
                         Designing attractive and responsive layouts.
@@ -329,19 +350,14 @@
                 </div>
 
 
-                <!-- JavaScript -->
 
                 <div class="skill-card">
 
                     <div class="skill-icon">
-
                         <i class="fa-brands fa-js"></i>
-
                     </div>
 
-                    <h3>
-                        JavaScript
-                    </h3>
+                    <h3>JavaScript</h3>
 
                     <p>
                         Adding functionality and interactivity.
@@ -350,19 +366,14 @@
                 </div>
 
 
-                <!-- C++ -->
 
                 <div class="skill-card">
 
                     <div class="skill-icon">
-
                         <i class="fa-solid fa-code"></i>
-
                     </div>
 
-                    <h3>
-                        C++
-                    </h3>
+                    <h3>C++</h3>
 
                     <p>
                         Problem solving and Data Structures.
@@ -371,19 +382,14 @@
                 </div>
 
 
-                <!-- Python -->
 
                 <div class="skill-card">
 
                     <div class="skill-icon">
-
                         <i class="fa-brands fa-python"></i>
-
                     </div>
 
-                    <h3>
-                        Python
-                    </h3>
+                    <h3>Python</h3>
 
                     <p>
                         Programming and application development.
@@ -392,19 +398,14 @@
                 </div>
 
 
-                <!-- GitHub -->
 
                 <div class="skill-card">
 
                     <div class="skill-icon">
-
                         <i class="fa-brands fa-github"></i>
-
                     </div>
 
-                    <h3>
-                        Git & GitHub
-                    </h3>
+                    <h3>Git & GitHub</h3>
 
                     <p>
                         Version control and project management.
@@ -420,9 +421,9 @@
 
 
 
-    <!-- ================= CONTACT SECTION ================= -->
+    <!-- ================= CONTACT ================= -->
 
-    <section id="contact" class="section contact-section">
+    <section id="contact" class="section contact-section reveal">
 
         <div class="container">
 
@@ -440,62 +441,143 @@
             </div>
 
 
-            <div class="contact-content">
+            <!-- Contact Form -->
+
+            <form
+                id="contactForm"
+                class="contact-form"
+                novalidate
+            >
 
 
-                <p>
-                    Feel free to connect with me for projects,
-                    opportunities or collaborations.
-                </p>
+                <div class="form-group">
 
+                    <label for="name">
+                        Name
+                    </label>
 
-                <div class="contact-links">
-
-
-                    <a
-                        href="mailto:aashinisingh77@gmail.com"
-                        class="contact-item"
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
                     >
 
-                        <i class="fa-solid fa-envelope"></i>
-
-                        <span>
-                            aashinisingh77@gmail.com
-                        </span>
-
-                    </a>
-
-
-                    <a
-                        href="https://github.com/aashini-singh"
-                        target="_blank"
-                        class="contact-item"
-                    >
-
-                        <i class="fa-brands fa-github"></i>
-
-                        <span>
-                            GitHub
-                        </span>
-
-                    </a>
-
-
-                    <a
-                        href="https://www.linkedin.com/in/aashini-singh-46479643b/"
-                        target="_blank"
-                        class="contact-item"
-                    >
-
-                        <i class="fa-brands fa-linkedin"></i>
-
-                        <span>
-                            LinkedIn
-                        </span>
-
-                    </a>
+                    <small class="error-message" id="nameError"></small>
 
                 </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                    >
+
+                    <small class="error-message" id="emailError"></small>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Write your message"
+                    ></textarea>
+
+                    <small
+                        class="error-message"
+                        id="messageError"
+                    ></small>
+
+                </div>
+
+
+
+                <button
+                    type="submit"
+                    class="btn primary-btn submit-btn"
+                >
+
+                    Send Message
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                </button>
+
+
+                <p
+                    id="successMessage"
+                    class="success-message"
+                ></p>
+
+
+            </form>
+
+
+            <!-- Social Links -->
+
+            <div class="contact-links">
+
+
+                <a
+                    href="mailto:aashinisingh77@gmail.com"
+                    class="contact-item"
+                >
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <span>
+                        aashinisingh77@gmail.com
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="https://github.com/aashini-singh"
+                    target="_blank"
+                    class="contact-item"
+                >
+
+                    <i class="fa-brands fa-github"></i>
+
+                    <span>
+                        GitHub
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="https://www.linkedin.com/in/aashini-singh-46479643b/"
+                    target="_blank"
+                    class="contact-item"
+                >
+
+                    <i class="fa-brands fa-linkedin"></i>
+
+                    <span>
+                        LinkedIn
+                    </span>
+
+                </a>
 
             </div>
 
@@ -519,6 +601,11 @@
 
     </footer>
 
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
 
 </body>
 

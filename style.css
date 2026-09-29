@@ -1,6 +1,6 @@
-/* =========================
+/* =========================================================
    RESET
-========================= */
+========================================================= */
 
 * {
     margin: 0;
@@ -15,26 +15,24 @@ html {
 
 
 body {
-
     font-family: "Poppins", sans-serif;
-
     background-color: #f8f9ff;
-
     color: #1f2937;
-
     line-height: 1.6;
 
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
 }
 
 
-/* =========================
-   VARIABLES
-========================= */
+/* =========================================================
+   COLOR VARIABLES
+========================================================= */
 
 :root {
 
     --primary: #6c63ff;
-
     --primary-dark: #5148d8;
 
     --dark: #1f2937;
@@ -47,12 +45,15 @@ body {
 
     --border: #e5e7eb;
 
+    --card-bg: #ffffff;
+
+    --input-bg: #ffffff;
 }
 
 
-/* =========================
-   COMMON
-========================= */
+/* =========================================================
+   COMMON CONTAINER
+========================================================= */
 
 .container {
 
@@ -60,15 +61,17 @@ body {
 
     max-width: 1200px;
 
-    margin: auto;
-
+    margin: 0 auto;
 }
 
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
 
 .section {
 
     padding: 100px 0;
-
 }
 
 
@@ -77,7 +80,6 @@ body {
     text-align: center;
 
     margin-bottom: 60px;
-
 }
 
 
@@ -88,7 +90,6 @@ body {
     font-weight: 600;
 
     margin-bottom: 5px;
-
 }
 
 
@@ -98,12 +99,13 @@ body {
 
     color: var(--dark);
 
+    transition: color 0.3s ease;
 }
 
 
-/* =========================
+/* =========================================================
    NAVBAR
-========================= */
+========================================================= */
 
 .navbar {
 
@@ -119,23 +121,39 @@ body {
 
     border-bottom: 1px solid var(--border);
 
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
 }
 
+
+/*
+    3 columns:
+
+    LEFT       CENTER       RIGHT
+
+    Logo       Navigation   Controls
+*/
 
 .nav-container {
 
     min-height: 75px;
 
-    display: flex;
+    display: grid;
+
+    grid-template-columns: 1fr auto 1fr;
 
     align-items: center;
-
-    justify-content: space-between;
-
 }
 
 
+/* =========================================================
+   LOGO
+========================================================= */
+
 .logo {
+
+    justify-self: start;
 
     text-decoration: none;
 
@@ -145,15 +163,19 @@ body {
 
     font-weight: 700;
 
+    transition: color 0.3s ease;
 }
 
 
 .logo span {
 
     color: var(--primary);
-
 }
 
+
+/* =========================================================
+   NAVIGATION MENU
+========================================================= */
 
 .nav-menu {
 
@@ -161,8 +183,9 @@ body {
 
     align-items: center;
 
-    gap: 35px;
+    justify-content: center;
 
+    gap: 35px;
 }
 
 
@@ -178,17 +201,17 @@ body {
 
     font-weight: 500;
 
-    transition: 0.3s;
-
+    transition: color 0.3s ease;
 }
 
 
 .nav-link:hover {
 
     color: var(--primary);
-
 }
 
+
+/* Underline animation */
 
 .nav-link::after {
 
@@ -206,21 +229,87 @@ body {
 
     background-color: var(--primary);
 
-    transition: 0.3s;
-
+    transition: width 0.3s ease;
 }
 
 
 .nav-link:hover::after {
 
     width: 100%;
-
 }
 
 
-/* =========================
-   HERO
-========================= */
+/* =========================================================
+   NAVIGATION CONTROLS
+========================================================= */
+
+.nav-controls {
+
+    justify-self: end;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+/* Dark mode button */
+
+.theme-toggle,
+
+.menu-toggle {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--dark);
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    border-radius: 50%;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+
+.theme-toggle:hover,
+
+.menu-toggle:hover {
+
+    background-color: #ecebff;
+
+    color: var(--primary);
+}
+
+
+/* Hamburger hidden on desktop */
+
+.menu-toggle {
+
+    display: none;
+}
+
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
 
 .hero {
 
@@ -229,7 +318,6 @@ body {
     display: flex;
 
     align-items: center;
-
 }
 
 
@@ -242,14 +330,12 @@ body {
     justify-content: space-between;
 
     gap: 70px;
-
 }
 
 
 .hero-content {
 
     flex: 1;
-
 }
 
 
@@ -262,7 +348,6 @@ body {
     font-weight: 600;
 
     margin-bottom: 10px;
-
 }
 
 
@@ -276,6 +361,7 @@ body {
 
     margin-bottom: 15px;
 
+    transition: color 0.3s ease;
 }
 
 
@@ -288,14 +374,12 @@ body {
     color: var(--text);
 
     margin-bottom: 20px;
-
 }
 
 
 .hero h2 span {
 
     color: var(--primary);
-
 }
 
 
@@ -308,13 +392,12 @@ body {
     font-size: 17px;
 
     margin-bottom: 30px;
-
 }
 
 
-/* =========================
-   BUTTONS
-========================= */
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
 
 .hero-buttons {
 
@@ -323,7 +406,6 @@ body {
     gap: 15px;
 
     flex-wrap: wrap;
-
 }
 
 
@@ -345,8 +427,7 @@ body {
 
     font-weight: 600;
 
-    transition: 0.3s;
-
+    transition: all 0.3s ease;
 }
 
 
@@ -355,7 +436,6 @@ body {
     background-color: var(--primary);
 
     color: white;
-
 }
 
 
@@ -364,7 +444,6 @@ body {
     background-color: var(--primary-dark);
 
     transform: translateY(-3px);
-
 }
 
 
@@ -375,7 +454,6 @@ body {
     color: var(--primary);
 
     background-color: transparent;
-
 }
 
 
@@ -385,12 +463,13 @@ body {
 
     color: white;
 
+    transform: translateY(-3px);
 }
 
 
-/* =========================
+/* =========================================================
    PROFILE IMAGE
-========================= */
+========================================================= */
 
 .hero-image {
 
@@ -399,7 +478,6 @@ body {
     display: flex;
 
     justify-content: center;
-
 }
 
 
@@ -409,16 +487,15 @@ body {
 
     height: 330px;
 
-    border-radius: 50%;
-
     padding: 8px;
+
+    border-radius: 50%;
 
     background: linear-gradient(
         135deg,
         var(--primary),
         #a78bfa
     );
-
 }
 
 
@@ -433,13 +510,12 @@ body {
     border-radius: 50%;
 
     border: 6px solid white;
-
 }
 
 
-/* =========================
-   ABOUT
-========================= */
+/* =========================================================
+   ABOUT SECTION
+========================================================= */
 
 .about-content {
 
@@ -450,21 +526,18 @@ body {
     gap: 50px;
 
     align-items: center;
-
 }
 
 
 .about-text {
 
     color: var(--text);
-
 }
 
 
 .about-text p {
 
     margin-bottom: 20px;
-
 }
 
 
@@ -473,7 +546,6 @@ body {
     display: grid;
 
     gap: 20px;
-
 }
 
 
@@ -481,14 +553,25 @@ body {
 
     padding: 25px;
 
-    background-color: white;
+    background-color: var(--card-bg);
 
     border: 1px solid var(--border);
 
     border-radius: 15px;
 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.05);
 
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.highlight-box:hover {
+
+    transform: translateY(-5px);
 }
 
 
@@ -499,25 +582,34 @@ body {
     color: var(--primary);
 
     margin-bottom: 10px;
-
 }
 
 
 .highlight-box h3 {
 
+    color: var(--dark);
+
     margin-bottom: 5px;
 
+    transition: color 0.3s ease;
 }
 
 
-/* =========================
-   SKILLS
-========================= */
+.highlight-box p {
+
+    color: var(--text);
+}
+
+
+/* =========================================================
+   SKILLS SECTION
+========================================================= */
 
 .skills-section {
 
     background-color: white;
 
+    transition: background-color 0.3s ease;
 }
 
 
@@ -528,7 +620,6 @@ body {
     grid-template-columns: repeat(3, 1fr);
 
     gap: 25px;
-
 }
 
 
@@ -544,8 +635,11 @@ body {
 
     text-align: center;
 
-    transition: 0.3s;
-
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease,
+        border-color 0.3s ease;
 }
 
 
@@ -553,8 +647,8 @@ body {
 
     transform: translateY(-8px);
 
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
-
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.08);
 }
 
 
@@ -579,16 +673,16 @@ body {
     color: var(--primary);
 
     font-size: 28px;
-
 }
 
 
 .skill-card h3 {
 
-    margin-bottom: 10px;
-
     color: var(--dark);
 
+    margin-bottom: 10px;
+
+    transition: color 0.3s ease;
 }
 
 
@@ -597,38 +691,161 @@ body {
     color: var(--text);
 
     font-size: 14px;
-
 }
 
 
-/* =========================
-   CONTACT
-========================= */
+/* =========================================================
+   CONTACT SECTION
+========================================================= */
 
 .contact-section {
 
     text-align: center;
-
 }
 
 
-.contact-content {
+/* =========================================================
+   CONTACT FORM
+========================================================= */
 
-    max-width: 700px;
+.contact-form {
 
-    margin: auto;
+    max-width: 650px;
 
+    margin: 0 auto 50px;
+
+    padding: 35px;
+
+    background-color: var(--card-bg);
+
+    border: 1px solid var(--border);
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.06);
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
 }
 
 
-.contact-content > p {
+.form-group {
 
-    color: var(--text);
+    margin-bottom: 20px;
 
-    margin-bottom: 35px;
-
+    text-align: left;
 }
 
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--dark);
+
+    font-weight: 500;
+
+    transition: color 0.3s ease;
+}
+
+
+.form-group input,
+
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    background-color: var(--input-bg);
+
+    color: var(--dark);
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.3s ease,
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+
+.form-group input:focus,
+
+.form-group textarea:focus {
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px rgba(108, 99, 255, 0.1);
+}
+
+
+.form-group textarea {
+
+    resize: vertical;
+}
+
+
+.form-group input::placeholder,
+
+.form-group textarea::placeholder {
+
+    color: #9ca3af;
+}
+
+
+.error-message {
+
+    display: block;
+
+    color: #dc2626;
+
+    font-size: 13px;
+
+    margin-top: 5px;
+}
+
+
+.success-message {
+
+    color: #16a34a;
+
+    margin-top: 15px;
+
+    font-weight: 500;
+}
+
+
+.submit-btn {
+
+    width: 100%;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   CONTACT LINKS
+========================================================= */
 
 .contact-links {
 
@@ -639,7 +856,6 @@ body {
     gap: 20px;
 
     flex-wrap: wrap;
-
 }
 
 
@@ -653,7 +869,7 @@ body {
 
     padding: 14px 20px;
 
-    background-color: white;
+    background-color: var(--card-bg);
 
     border: 1px solid var(--border);
 
@@ -663,15 +879,17 @@ body {
 
     color: var(--dark);
 
-    transition: 0.3s;
-
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background-color 0.3s ease,
+        color 0.3s ease;
 }
 
 
 .contact-item i {
 
     color: var(--primary);
-
 }
 
 
@@ -680,13 +898,12 @@ body {
     transform: translateY(-4px);
 
     border-color: var(--primary);
-
 }
 
 
-/* =========================
+/* =========================================================
    FOOTER
-========================= */
+========================================================= */
 
 footer {
 
@@ -694,18 +911,145 @@ footer {
 
     text-align: center;
 
-    background-color: var(--dark);
+    background-color: #1f2937;
 
     color: white;
 
     font-size: 14px;
-
 }
 
 
-/* =========================
+/* =========================================================
+   SCROLL ANIMATION
+========================================================= */
+
+.reveal {
+
+    opacity: 0;
+
+    transform: translateY(50px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+
+.reveal.active {
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.dark-mode {
+
+    --dark: #f8fafc;
+
+    --text: #cbd5e1;
+
+    --light: #111827;
+
+    --white: #1e293b;
+
+    --border: #334155;
+
+    --card-bg: #1e293b;
+
+    --input-bg: #0f172a;
+
+    background-color: #0f172a;
+
+    color: #f8fafc;
+}
+
+
+/* Navbar */
+
+body.dark-mode .navbar {
+
+    background-color: rgba(15, 23, 42, 0.95);
+
+    border-color: #334155;
+}
+
+
+/* Logo */
+
+body.dark-mode .logo {
+
+    color: #f8fafc;
+}
+
+
+/* Navigation */
+
+body.dark-mode .nav-link {
+
+    color: #f8fafc;
+}
+
+
+/* Hero */
+
+body.dark-mode .hero h1 {
+
+    color: #f8fafc;
+}
+
+
+body.dark-mode .hero h2 {
+
+    color: #cbd5e1;
+}
+
+
+/* Section headings */
+
+body.dark-mode .section-heading h2 {
+
+    color: #f8fafc;
+}
+
+
+/* Skills */
+
+body.dark-mode .skills-section {
+
+    background-color: #111827;
+}
+
+
+/* Theme icon */
+
+body.dark-mode .theme-toggle {
+
+    color: #facc15;
+}
+
+
+/* Form */
+
+body.dark-mode .form-group input,
+
+body.dark-mode .form-group textarea {
+
+    color: #f8fafc;
+
+    background-color: #0f172a;
+
+    border-color: #334155;
+}
+
+
+/* =========================================================
    TABLET
-========================= */
+========================================================= */
 
 @media (max-width: 992px) {
 
@@ -713,14 +1057,12 @@ footer {
     .hero-container {
 
         gap: 40px;
-
     }
 
 
     .hero-image {
 
         flex: 0 0 280px;
-
     }
 
 
@@ -729,95 +1071,108 @@ footer {
         width: 270px;
 
         height: 270px;
-
     }
 
 
     .about-content {
 
         grid-template-columns: 1fr;
-
     }
 
 
     .skills-grid {
 
         grid-template-columns: repeat(2, 1fr);
-
     }
 
 }
 
 
-/* =========================
+/* =========================================================
    MOBILE
-========================= */
+========================================================= */
 
 @media (max-width: 768px) {
 
 
-    .section {
-
-        padding: 70px 0;
-
-    }
-
-
-    .section-heading {
-
-        margin-bottom: 40px;
-
-    }
-
-
-    .section-heading h2 {
-
-        font-size: 32px;
-
-    }
-
-
-    /* Navbar */
+    /* =========================
+       NAVBAR
+    ========================= */
 
     .nav-container {
 
-        flex-direction: column;
+        display: flex;
 
-        justify-content: center;
+        min-height: 70px;
 
-        gap: 10px;
+        position: relative;
 
-        padding: 15px 0;
-
+        justify-content: space-between;
     }
 
 
     .nav-menu {
 
-        gap: 18px;
+        position: absolute;
 
-        flex-wrap: wrap;
+        top: 70px;
 
-        justify-content: center;
+        left: 0;
 
+        width: 100%;
+
+        padding: 25px;
+
+        display: none;
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        background-color: white;
+
+        border-top: 1px solid var(--border);
+
+        box-shadow:
+            0 10px 20px rgba(0, 0, 0, 0.08);
     }
 
 
-    .nav-link {
+    .nav-menu.active {
 
-        font-size: 14px;
-
+        display: flex;
     }
 
 
-    /* Hero */
+    .nav-controls {
+
+        margin-left: auto;
+    }
+
+
+    .menu-toggle {
+
+        display: flex;
+    }
+
+
+    body.dark-mode .nav-menu {
+
+        background-color: #0f172a;
+
+        border-color: #334155;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
 
         min-height: auto;
 
         padding: 80px 0;
-
     }
 
 
@@ -826,28 +1181,24 @@ footer {
         flex-direction: column-reverse;
 
         text-align: center;
-
     }
 
 
     .hero-content {
 
         width: 100%;
-
     }
 
 
     .hero h1 {
 
         font-size: 43px;
-
     }
 
 
     .hero h2 {
 
         font-size: 20px;
-
     }
 
 
@@ -856,21 +1207,18 @@ footer {
         margin-left: auto;
 
         margin-right: auto;
-
     }
 
 
     .hero-buttons {
 
         justify-content: center;
-
     }
 
 
     .hero-image {
 
         flex: none;
-
     }
 
 
@@ -879,42 +1227,70 @@ footer {
         width: 230px;
 
         height: 230px;
-
     }
 
 
-    /* Skills */
+    /* =========================
+       SECTIONS
+    ========================= */
+
+    .section {
+
+        padding: 70px 0;
+    }
+
+
+    .section-heading {
+
+        margin-bottom: 40px;
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 32px;
+    }
+
+
+    /* =========================
+       SKILLS
+    ========================= */
 
     .skills-grid {
 
         grid-template-columns: 1fr;
-
     }
 
 
-    /* Contact */
+    /* =========================
+       CONTACT
+    ========================= */
 
     .contact-links {
 
         flex-direction: column;
 
         align-items: stretch;
-
     }
 
 
     .contact-item {
 
         justify-content: center;
+    }
 
+
+    .contact-form {
+
+        padding: 25px 20px;
     }
 
 }
 
 
-/* =========================
+/* =========================================================
    SMALL MOBILE
-========================= */
+========================================================= */
 
 @media (max-width: 480px) {
 
@@ -922,35 +1298,36 @@ footer {
     .container {
 
         width: 92%;
-
     }
 
 
     .logo {
 
         font-size: 24px;
-
     }
 
 
     .nav-menu {
 
-        gap: 12px;
+        gap: 15px;
+    }
 
+
+    .nav-link {
+
+        font-size: 14px;
     }
 
 
     .hero h1 {
 
         font-size: 36px;
-
     }
 
 
     .hero h2 {
 
         font-size: 18px;
-
     }
 
 
@@ -959,14 +1336,26 @@ footer {
         width: 200px;
 
         height: 200px;
+    }
 
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        width: 100%;
     }
 
 
     .btn {
 
         width: 100%;
+    }
 
+
+    .contact-form {
+
+        padding: 20px 15px;
     }
 
 }

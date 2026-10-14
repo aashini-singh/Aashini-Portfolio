@@ -1,260 +1,164 @@
-/* =========================
+
+/* =====================================
    MOBILE NAVIGATION
-========================= */
+===================================== */
 
 const menuToggle = document.getElementById("menuToggle");
-
 const navMenu = document.getElementById("navMenu");
 
+if (menuToggle && navMenu) {
+    menuToggle.addEventListener("click", function () {
+        const isOpen = navMenu.classList.toggle("active");
 
-menuToggle.addEventListener("click", function () {
-
-    navMenu.classList.toggle("active");
-
-
-    const icon = menuToggle.querySelector("i");
-
-
-    if (navMenu.classList.contains("active")) {
-
-        icon.classList.remove("fa-bars");
-
-        icon.classList.add("fa-xmark");
-
-    } else {
-
-        icon.classList.remove("fa-xmark");
-
-        icon.classList.add("fa-bars");
-
-    }
-
-});
-
-
-
-/* =========================
-   CLOSE MOBILE MENU
-   AFTER CLICKING LINK
-========================= */
-
-const navLinks = document.querySelectorAll(".nav-link");
-
-
-navLinks.forEach(function (link) {
-
-    link.addEventListener("click", function () {
-
-        navMenu.classList.remove("active");
-
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation menu" : "Open navigation menu"
+        );
 
         const icon = menuToggle.querySelector("i");
 
-        icon.classList.remove("fa-xmark");
-
-        icon.classList.add("fa-bars");
-
-    });
-
-});
-
-
-
-/* =========================
-   DARK / LIGHT MODE
-========================= */
-
-const themeToggle =
-    document.getElementById("themeToggle");
-
-
-themeToggle.addEventListener("click", function () {
-
-    document.body.classList.toggle("dark-mode");
-
-
-    const icon = themeToggle.querySelector("i");
-
-
-    if (document.body.classList.contains("dark-mode")) {
-
-        icon.classList.remove("fa-moon");
-
-        icon.classList.add("fa-sun");
-
-    } else {
-
-        icon.classList.remove("fa-sun");
-
-        icon.classList.add("fa-moon");
-
-    }
-
-});
-
-
-
-/* =========================
-   SCROLL ANIMATION
-========================= */
-
-const revealElements =
-    document.querySelectorAll(".reveal");
-
-
-function revealOnScroll() {
-
-    const windowHeight = window.innerHeight;
-
-
-    revealElements.forEach(function (element) {
-
-        const elementTop =
-            element.getBoundingClientRect().top;
-
-
-        if (elementTop < windowHeight - 100) {
-
-            element.classList.add("active");
-
+        if (icon) {
+            icon.classList.toggle("fa-bars", !isOpen);
+            icon.classList.toggle("fa-xmark", isOpen);
         }
-
     });
 
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    navLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+            navMenu.classList.remove("active");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "Open navigation menu");
+
+            const icon = menuToggle.querySelector("i");
+
+            if (icon) {
+                icon.classList.remove("fa-xmark");
+                icon.classList.add("fa-bars");
+            }
+        });
+    });
 }
 
 
-window.addEventListener("scroll", revealOnScroll);
+/* =====================================
+   DARK / LIGHT MODE
+===================================== */
+
+const themeToggle = document.getElementById("themeToggle");
+
+if (themeToggle) {
+    themeToggle.addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+
+        const isDark = document.body.classList.contains("dark-mode");
+        const icon = themeToggle.querySelector("i");
+
+        if (icon) {
+            icon.classList.toggle("fa-sun", isDark);
+            icon.classList.toggle("fa-moon", !isDark);
+        }
+
+        themeToggle.setAttribute(
+            "aria-label",
+            isDark ? "Switch to light mode" : "Switch to dark mode"
+        );
+    });
+}
 
 
-/* Run once when page loads */
+/* =====================================
+   SCROLL REVEAL ANIMATIONS
+===================================== */
 
-revealOnScroll();
+const revealElements = document.querySelectorAll(".reveal");
+
+if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver(
+        function (entries, observer) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        {
+            threshold: 0.12
+        }
+    );
+
+    revealElements.forEach(function (element) {
+        revealObserver.observe(element);
+    });
+} else {
+    revealElements.forEach(function (element) {
+        element.classList.add("active");
+    });
+}
 
 
-
-/* =========================
+/* =====================================
    CONTACT FORM VALIDATION
-========================= */
+===================================== */
 
-const contactForm =
-    document.getElementById("contactForm");
+const contactForm = document.getElementById("contactForm");
 
+if (contactForm) {
+    contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-contactForm.addEventListener("submit", function (event) {
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
 
-    event.preventDefault();
+        const nameError = document.getElementById("nameError");
+        const emailError = document.getElementById("emailError");
+        const messageError = document.getElementById("messageError");
+        const successMessage = document.getElementById("successMessage");
 
+        nameError.textContent = "";
+        emailError.textContent = "";
+        messageError.textContent = "";
+        successMessage.textContent = "";
 
-    // Get values
+        let isValid = true;
 
-    const name =
-        document.getElementById("name").value.trim();
+        /* NAME VALIDATION */
+        if (name === "") {
+            nameError.textContent = "Please enter your name.";
+            isValid = false;
+        }
 
+        /* EMAIL VALIDATION */
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    const email =
-        document.getElementById("email").value.trim();
+        if (email === "") {
+            emailError.textContent = "Please enter your email.";
+            isValid = false;
+        } else if (!emailPattern.test(email)) {
+            emailError.textContent = "Please enter a valid email address.";
+            isValid = false;
+        }
 
+        /* MESSAGE VALIDATION */
+        if (message === "") {
+            messageError.textContent = "Please enter your message.";
+            isValid = false;
+        } else if (message.length < 10) {
+            messageError.textContent =
+                "Message should contain at least 10 characters.";
+            isValid = false;
+        }
 
-    const message =
-        document.getElementById("message").value.trim();
+        /* SUCCESS */
+        if (isValid) {
+            successMessage.textContent =
+                "All fields are valid! This demo form does not send messages.";
 
-
-    // Error elements
-
-    const nameError =
-        document.getElementById("nameError");
-
-
-    const emailError =
-        document.getElementById("emailError");
-
-
-    const messageError =
-        document.getElementById("messageError");
-
-
-    const successMessage =
-        document.getElementById("successMessage");
-
-
-    // Clear previous errors
-
-    nameError.textContent = "";
-
-    emailError.textContent = "";
-
-    messageError.textContent = "";
-
-    successMessage.textContent = "";
-
-
-    let isValid = true;
-
-
-    /* Name validation */
-
-    if (name === "") {
-
-        nameError.textContent =
-            "Please enter your name.";
-
-        isValid = false;
-
-    }
-
-
-    /* Email validation */
-
-    const emailPattern =
-        /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-
-    if (email === "") {
-
-        emailError.textContent =
-            "Please enter your email.";
-
-        isValid = false;
-
-    } else if (!emailPattern.test(email)) {
-
-        emailError.textContent =
-            "Please enter a valid email address.";
-
-        isValid = false;
-
-    }
-
-
-    /* Message validation */
-
-    if (message === "") {
-
-        messageError.textContent =
-            "Please enter your message.";
-
-        isValid = false;
-
-    } else if (message.length < 10) {
-
-        messageError.textContent =
-            "Message should contain at least 10 characters.";
-
-        isValid = false;
-
-    }
-
-
-    /* Success */
-
-    if (isValid) {
-
-        successMessage.textContent =
-            "Your message has been validated successfully!";
-
-        contactForm.reset();
-
-    }
-
-});
+            contactForm.reset();
+        }
+    });
+}

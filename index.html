@@ -1,612 +1,429 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Aashini Singh | Portfolio</title>
-
+    <title>Aashini | Portfolio</title>
 
     <!-- Google Fonts -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
-
-
-    <!-- Font Awesome -->
-
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    >
-
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <!-- CSS -->
-
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 
 <body>
 
+    <!-- NAVBAR -->
+    <header class="header">
+        <nav class="container nav-container">
 
-    <!-- ================= NAVBAR ================= -->
+            <a href="#home" class="logo">Aashini</a>
 
-    <header class="navbar">
-
-        <div class="container nav-container">
-
-
-            <!-- Logo -->
-
-            <a href="#home" class="logo">
-                <span>Aashini</span>
-            </a>
-
-
-            <!-- Navigation -->
-
-            <nav class="nav-menu" id="navMenu">
-
-                <a href="#home" class="nav-link">
-                    Home
-                </a>
-
-                <a href="#about" class="nav-link">
-                    About
-                </a>
-
-                <a href="#skills" class="nav-link">
-                    Skills
-                </a>
-
-                <a href="#contact" class="nav-link">
-                    Contact
-                </a>
-
-            </nav>
-
-
-            <!-- Right Side Controls -->
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
 
             <div class="nav-controls">
-
-                <!-- Dark / Light Mode -->
-
-                <button
-                    id="themeToggle"
-                    class="theme-toggle"
-                    aria-label="Toggle dark mode"
-                >
-
+                <button class="icon-button" id="themeToggle" aria-label="Toggle theme">
                     <i class="fa-solid fa-moon"></i>
-
                 </button>
 
-
-                <!-- Mobile Menu -->
-
-                <button
-                    id="menuToggle"
-                    class="menu-toggle"
-                    aria-label="Open navigation menu"
-                >
-
+                <button class="icon-button menu-toggle" id="menuToggle"
+                        aria-label="Open navigation menu" aria-expanded="false">
                     <i class="fa-solid fa-bars"></i>
-
                 </button>
-
             </div>
 
-        </div>
-
+        </nav>
     </header>
 
 
-
-    <!-- ================= HERO ================= -->
-
-    <section id="home" class="hero">
-
+    <!-- HOME SECTION -->
+    <section id="home" class="section hero">
         <div class="container hero-container">
 
+            <div class="hero-content reveal">
+                <p class="eyebrow">HELLO, I'M</p>
 
-            <div class="hero-content">
+                <h1>Aashini Singh</h1>
 
-                <p class="greeting">
-                    Hello, I'm
+                <h2>Computer Science Student & Frontend Developer</h2>
+
+                <p class="description">
+                    I enjoy building responsive websites, exploring new technologies
+                    and solving programming problems. I am continuously developing
+                    my skills through practical projects and hands-on learning.
                 </p>
-
-
-                <h1>
-                    Aashini Singh
-                </h1>
-
-
-                <h2>
-                    Computer Science Student
-                    <span>& Frontend Developer</span>
-                </h2>
-
-
-                <p class="hero-description">
-
-                    I love creating beautiful, responsive and
-                    user-friendly websites while continuously
-                    learning new technologies.
-
-                </p>
-
 
                 <div class="hero-buttons">
+                    <a href="#contact" class="btn primary-btn">Contact Me</a>
 
-
-                    <a
-                        href="#contact"
-                        class="btn primary-btn"
-                    >
-
-                        Contact Me
-
-                        <i class="fa-solid fa-arrow-right"></i>
-
+                    <a href="https://github.com/aashini-singh"
+                       target="_blank" rel="noopener noreferrer"
+                       class="btn secondary-btn">
+                        <i class="fa-brands fa-github"></i> GitHub
                     </a>
-
-
-                    <a
-                        href="https://github.com/aashini-singh"
-                        target="_blank"
-                        class="btn secondary-btn"
-                    >
-
-                        <i class="fa-brands fa-github"></i>
-
-                        GitHub
-
-                    </a>
-
                 </div>
-
             </div>
 
-
-            <!-- Profile -->
-
-            <div class="hero-image">
-
-                <div class="image-circle">
-
-                    <img
-                        src="images/profile.jpg"
-                        alt="Aashini Singh"
-                    >
-
-                </div>
-
+            <div class="hero-image reveal">
+                <img src="images/profile.jpg" alt="Aashini Singh">
             </div>
 
         </div>
-
     </section>
 
 
-
-    <!-- ================= ABOUT ================= -->
-
-    <section id="about" class="section reveal">
-
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section section-alt">
         <div class="container">
 
-
-            <div class="section-heading">
-
-                <p>
-                    Get To Know Me
-                </p>
-
-                <h2>
-                    About Me
-                </h2>
-
+            <div class="section-heading reveal">
+                <p>GET TO KNOW ME</p>
+                <h2>About Me</h2>
             </div>
 
-
-            <div class="about-content">
-
-
-                <div class="about-text">
-
+            <div class="about-container reveal">
+                <div>
                     <p>
-
-                        I am a B.Tech Computer Science student
-                        passionate about software development,
-                        web development and problem solving.
-
+                        I am Aashini Singh, a B.Tech Computer Science and Engineering
+                        student at NIET, Greater Noida. I am interested in frontend
+                        development, programming and software projects.
                     </p>
 
-
                     <p>
-
-                        I enjoy working with HTML, CSS, JavaScript,
-                        C++ and Python. I am also interested in
-                        Data Structures and Algorithms.
-
+                        I started my portfolio from scratch and progressively improved
+                        it by adding responsive layouts, JavaScript interactivity and
+                        new sections. I enjoy learning by building and improving
+                        projects step by step.
                     </p>
-
-
-                    <p>
-
-                        I believe in learning by building projects
-                        and continuously improving my technical skills.
-
-                    </p>
-
                 </div>
 
-
-                <div class="about-highlight">
-
-
-                    <div class="highlight-box">
-
-                        <i class="fa-solid fa-code"></i>
-
-                        <h3>
-                            Web Development
-                        </h3>
-
-                        <p>
-                            Building responsive and user-friendly websites.
-                        </p>
-
-                    </div>
-
-
-                    <div class="highlight-box">
-
-                        <i class="fa-solid fa-laptop-code"></i>
-
-                        <h3>
-                            Problem Solving
-                        </h3>
-
-                        <p>
-                            Practicing DSA and programming concepts.
-                        </p>
-
-                    </div>
-
+                <div class="highlight-card">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h3>Learning by Building</h3>
+                    <p>Turning concepts into practical projects and user-friendly interfaces.</p>
                 </div>
-
             </div>
 
         </div>
-
     </section>
 
 
-
-    <!-- ================= SKILLS ================= -->
-
-    <section id="skills" class="section skills-section reveal">
-
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section">
         <div class="container">
 
-
-            <div class="section-heading">
-
-                <p>
-                    What I Know
-                </p>
-
-                <h2>
-                    My Skills
-                </h2>
-
+            <div class="section-heading reveal">
+                <p>WHAT I WORK WITH</p>
+                <h2>My Skills</h2>
             </div>
-
 
             <div class="skills-grid">
 
-
-                <div class="skill-card">
-
-                    <div class="skill-icon">
-                        <i class="fa-brands fa-html5"></i>
-                    </div>
-
+                <article class="skill-card reveal">
+                    <i class="fa-brands fa-html5"></i>
                     <h3>HTML</h3>
+                    <p>Webpage structure</p>
+                </article>
 
-                    <p>
-                        Creating structured and semantic web pages.
-                    </p>
-
-                </div>
-
-
-
-                <div class="skill-card">
-
-                    <div class="skill-icon">
-                        <i class="fa-brands fa-css3-alt"></i>
-                    </div>
-
+                <article class="skill-card reveal">
+                    <i class="fa-brands fa-css3-alt"></i>
                     <h3>CSS</h3>
+                    <p>Styling and responsive layouts</p>
+                </article>
 
-                    <p>
-                        Designing attractive and responsive layouts.
-                    </p>
-
-                </div>
-
-
-
-                <div class="skill-card">
-
-                    <div class="skill-icon">
-                        <i class="fa-brands fa-js"></i>
-                    </div>
-
+                <article class="skill-card reveal">
+                    <i class="fa-brands fa-js"></i>
                     <h3>JavaScript</h3>
+                    <p>Interactive web features</p>
+                </article>
 
-                    <p>
-                        Adding functionality and interactivity.
-                    </p>
+                <article class="skill-card reveal">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>C / C++</h3>
+                    <p>Programming and DSA practice</p>
+                </article>
 
-                </div>
-
-
-
-                <div class="skill-card">
-
-                    <div class="skill-icon">
-                        <i class="fa-solid fa-code"></i>
-                    </div>
-
-                    <h3>C++</h3>
-
-                    <p>
-                        Problem solving and Data Structures.
-                    </p>
-
-                </div>
-
-
-
-                <div class="skill-card">
-
-                    <div class="skill-icon">
-                        <i class="fa-brands fa-python"></i>
-                    </div>
-
+                <article class="skill-card reveal">
+                    <i class="fa-brands fa-python"></i>
                     <h3>Python</h3>
+                    <p>Programming and application logic</p>
+                </article>
 
-                    <p>
-                        Programming and application development.
-                    </p>
-
-                </div>
-
-
-
-                <div class="skill-card">
-
-                    <div class="skill-icon">
-                        <i class="fa-brands fa-github"></i>
-                    </div>
-
+                <article class="skill-card reveal">
+                    <i class="fa-brands fa-github"></i>
                     <h3>Git & GitHub</h3>
-
-                    <p>
-                        Version control and project management.
-                    </p>
-
-                </div>
+                    <p>Version control and repositories</p>
+                </article>
 
             </div>
-
         </div>
-
     </section>
 
 
-
-    <!-- ================= CONTACT ================= -->
-
-    <section id="contact" class="section contact-section reveal">
-
+    <!-- MODULE 4: PROJECTS SECTION -->
+    <section id="projects" class="section section-alt">
         <div class="container">
 
+            <div class="section-heading reveal">
+                <p>MY WORK</p>
+                <h2>Projects</h2>
+            </div>
 
-            <div class="section-heading">
+            <div class="projects-grid">
+
+                <!-- PROJECT 1 -->
+                <article class="project-card reveal">
+                    <div class="project-icon">
+                        <i class="fa-solid fa-droplet"></i>
+                    </div>
+
+                    <h3>Smart Blood Bank Management System</h3>
+
+                    <p>
+                        A blood bank management project focused on donor registration,
+                        blood availability and emergency matching workflows.
+                    </p>
+
+                    <div class="project-tech">
+                        <span>C/C++</span>
+                        <span>DSA</span>
+                    </div>
+
+                    <a class="project-btn"
+                       href="https://github.com/aashini-singh/Smart_Blood_Bank_Management_System"
+                       target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                </article>
+
+
+                <!-- PROJECT 2 -->
+                <article class="project-card reveal">
+                    <div class="project-icon">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+
+                    <h3>Smart Public Utility Complaint Management System</h3>
+
+                    <p>
+                        A project designed to organize public utility complaints
+                        and manage complaint records using structured program logic.
+                    </p>
+
+                    <div class="project-tech">
+                        <span>C</span>
+                        <span>DSA</span>
+                        <span>File Handling</span>
+                    </div>
+
+                    <a class="project-btn"
+                       href="https://github.com/aashini-singh"
+                       target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-github"></i> GitHub Profile
+                    </a>
+                </article>
+
+
+                <!-- PROJECT 3 -->
+                <article class="project-card reveal">
+                    <div class="project-icon">
+                        <i class="fa-solid fa-mug-hot"></i>
+                    </div>
+
+                    <h3>CoffeePeelo</h3>
+
+                    <p>
+                        A coffee website featuring product cards, responsive
+                        layouts and interactive JavaScript functionality.
+                    </p>
+
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <a class="project-btn"
+                       href="https://github.com/aashini-singh"
+                       target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-github"></i> GitHub Profile
+                    </a>
+                </article>
+
+
+                <!-- PROJECT 4 -->
+                <article class="project-card reveal">
+                    <div class="project-icon">
+                        <i class="fa-solid fa-hospital"></i>
+                    </div>
+
+                    <h3>Smart Hospital Management System</h3>
+
+                    <p>
+                        A Python console application for managing hospital-related
+                        records with JSON-based data persistence.
+                    </p>
+
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>JSON</span>
+                    </div>
+
+                    <a class="project-btn"
+                       href="https://github.com/aashini-singh"
+                       target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-github"></i> GitHub Profile
+                    </a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- MODULE 4: EDUCATION SECTION -->
+    <section id="education" class="section">
+        <div class="container">
+
+            <div class="section-heading reveal">
+                <p>MY ACADEMIC JOURNEY</p>
+                <h2>Education</h2>
+            </div>
+
+            <article class="education-card reveal">
+                <div class="education-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+
+                <div>
+                    <span class="education-year">Currently Pursuing</span>
+                    <h3>B.Tech in Computer Science & Engineering</h3>
+                    <h4>NIET, Greater Noida</h4>
+
+                    <p>
+                        Building a foundation in programming, data structures,
+                        web development and computer science concepts.
+                    </p>
+                </div>
+            </article>
+
+
+            <!-- RESUME DOWNLOAD -->
+            <div class="resume-container reveal">
+                <div class="resume-icon">
+                    <i class="fa-solid fa-file-lines"></i>
+                </div>
+
+                <h3>Want to know more about me?</h3>
 
                 <p>
-                    Let's Connect
+                    Explore my technical skills, projects and education
+                    in my resume.
                 </p>
 
-                <h2>
-                    Contact Me
-                </h2>
-
-            </div>
-
-
-            <!-- Contact Form -->
-
-            <form
-                id="contactForm"
-                class="contact-form"
-                novalidate
-            >
-
-
-                <div class="form-group">
-
-                    <label for="name">
-                        Name
-                    </label>
-
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Enter your name"
-                    >
-
-                    <small class="error-message" id="nameError"></small>
-
-                </div>
-
-
-
-                <div class="form-group">
-
-                    <label for="email">
-                        Email
-                    </label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Enter your email"
-                    >
-
-                    <small class="error-message" id="emailError"></small>
-
-                </div>
-
-
-
-                <div class="form-group">
-
-                    <label for="message">
-                        Message
-                    </label>
-
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="5"
-                        placeholder="Write your message"
-                    ></textarea>
-
-                    <small
-                        class="error-message"
-                        id="messageError"
-                    ></small>
-
-                </div>
-
-
-
-                <button
-                    type="submit"
-                    class="btn primary-btn submit-btn"
-                >
-
-                    Send Message
-
-                    <i class="fa-solid fa-paper-plane"></i>
-
-                </button>
-
-
-                <p
-                    id="successMessage"
-                    class="success-message"
-                ></p>
-
-
-            </form>
-
-
-            <!-- Social Links -->
-
-            <div class="contact-links">
-
-
-                <a
-                    href="mailto:aashinisingh77@gmail.com"
-                    class="contact-item"
-                >
-
-                    <i class="fa-solid fa-envelope"></i>
-
-                    <span>
-                        aashinisingh77@gmail.com
-                    </span>
-
+                <a href="resume/Aashini_Singh_Resume.pdf"
+                   download="Aashini_Singh_Resume.pdf"
+                   class="btn primary-btn">
+                    <i class="fa-solid fa-download"></i>
+                    Download Resume
                 </a>
-
-
-                <a
-                    href="https://github.com/aashini-singh"
-                    target="_blank"
-                    class="contact-item"
-                >
-
-                    <i class="fa-brands fa-github"></i>
-
-                    <span>
-                        GitHub
-                    </span>
-
-                </a>
-
-
-                <a
-                    href="https://www.linkedin.com/in/aashini-singh-46479643b/"
-                    target="_blank"
-                    class="contact-item"
-                >
-
-                    <i class="fa-brands fa-linkedin"></i>
-
-                    <span>
-                        LinkedIn
-                    </span>
-
-                </a>
-
             </div>
 
         </div>
-
     </section>
 
 
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer>
-
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section section-alt">
         <div class="container">
 
-            <p>
-                © 2026 Aashini Singh. All Rights Reserved.
-            </p>
+            <div class="section-heading reveal">
+                <p>GET IN TOUCH</p>
+                <h2>Contact Me</h2>
+            </div>
 
+            <div class="contact-container">
+
+                <form id="contactForm" class="contact-form reveal" novalidate>
+
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name"
+                               placeholder="Enter your name">
+                        <small id="nameError"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email"
+                               placeholder="Enter your email">
+                        <small id="emailError"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5"
+                                  placeholder="Write your message"></textarea>
+                        <small id="messageError"></small>
+                    </div>
+
+                    <button type="submit" class="btn primary-btn">
+                        Validate Message
+                    </button>
+
+                    <p id="successMessage" role="status"></p>
+                </form>
+
+
+                <div class="contact-info reveal">
+                    <h3>Let's Connect</h3>
+
+                    <p>
+                        Feel free to explore my work and connect with me.
+                    </p>
+
+                    <a href="https://github.com/aashini-singh"
+                       target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-github"></i>
+                        GitHub
+                    </a>
+
+                    <a href="https://www.linkedin.com/"
+                       target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin"></i>
+                        LinkedIn
+                    </a>
+                </div>
+
+            </div>
         </div>
+    </section>
 
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Aashini Singh | Designed and developed with care.</p>
+        </div>
     </footer>
 
 
-
-    <!-- JavaScript -->
-
+    <!-- JAVASCRIPT -->
     <script src="script.js"></script>
-
 </body>
-
 </html>

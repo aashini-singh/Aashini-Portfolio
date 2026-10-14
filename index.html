@@ -1,18 +1,25 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Aashini | Portfolio</title>
-    <meta name="description" content="Portfolio of Aashini Singh, Computer Science student and aspiring frontend developer.">
+    <title>Aashini Singh | Frontend Developer</title>
+
+    <meta name="description"
+          content="Explore Aashini Singh's portfolio, frontend development skills, projects, education and contact information.">
+
+    <meta name="theme-color" content="#fffdf8">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -24,25 +31,30 @@
 
             <a href="#home" class="logo">Aashini<span>.</span></a>
 
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
 
             <div class="nav-actions">
-                <button id="themeToggle" class="icon-button"
-                        type="button" aria-label="Toggle theme">
-                    <i class="fas fa-moon"></i>
+                <button id="themeToggle"
+                        class="icon-button"
+                        type="button"
+                        aria-label="Toggle dark mode">
+                    <i class="fa-solid fa-moon"></i>
                 </button>
 
-                <button id="menuToggle" class="icon-button menu-toggle"
-                        type="button" aria-label="Toggle navigation"
-                        aria-controls="navMenu" aria-expanded="false">
-                    <i class="fas fa-bars"></i>
+                <button id="menuToggle"
+                        class="icon-button menu-toggle"
+                        type="button"
+                        aria-label="Open navigation menu"
+                        aria-expanded="false"
+                        aria-controls="navMenu">
+                    <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
 
@@ -52,57 +64,89 @@
 
     <main>
 
-        <!-- HOME -->
-        <section id="home" class="hero section">
-            <div class="container hero-grid">
+        <!-- HOME SECTION -->
+        <section class="hero section" id="home">
+            <div class="container hero-content">
 
-                <div class="hero-content reveal">
-                    <p class="eyebrow">HELLO, I'M</p>
+                <div class="hero-text reveal">
+                    <p class="eyebrow">
+                        HELLO, WELCOME TO MY PORTFOLIO
+                    </p>
 
-                    <h1>Aashini <span>Singh</span></h1>
+                    <h1>
+                        Hi, I'm <span class="gradient-text">Aashini Singh</span>
+                    </h1>
 
-                    <h2>Frontend Developer &amp; CSE Student</h2>
+                    <h2>Frontend Developer & CSE Student</h2>
 
                     <p class="hero-description">
-                        I enjoy building responsive websites, exploring new
-                        technologies and solving programming problems.
-                        I'm continuously learning and developing my skills
-                        through projects and practical experience.
+                        I enjoy building responsive, interactive and user-friendly
+                        websites. I love learning new technologies and turning
+                        ideas into practical web experiences.
                     </p>
 
                     <div class="hero-buttons">
-                        <a href="#projects" class="btn">View My Projects</a>
-                        <a href="#contact" class="btn btn-outline">Contact Me</a>
-                    </div>
-
-                    <div class="hero-socials">
-                        <a href="https://github.com/aashini-singh"
-                           target="_blank" rel="noopener noreferrer"
-                           aria-label="GitHub">
-                            <i class="fab fa-github"></i>
+                        <a href="#projects" class="btn btn-primary">
+                            Explore My Work
+                            <i class="fa-solid fa-arrow-right"></i>
                         </a>
 
-                        <!-- Replace with your actual LinkedIn profile URL -->
+                        <a href="#contact" class="btn btn-outline">
+                            Contact Me
+                        </a>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://github.com/aashini-singh"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+
+                        <!-- Replace this with your actual LinkedIn profile URL -->
                         <a href="https://www.linkedin.com/"
-                           target="_blank" rel="noopener noreferrer"
+                           target="_blank"
+                           rel="noopener noreferrer"
                            aria-label="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+
+                        <a href="mailto:YOUR_EMAIL@gmail.com"
+                           aria-label="Email">
+                            <i class="fa-solid fa-envelope"></i>
                         </a>
                     </div>
                 </div>
 
                 <div class="hero-visual reveal">
-                    <div class="profile-frame">
-                        <img src="images/profile.jpg"
-                             alt="Aashini Singh"
-                             class="profile-image"
-                             onerror="this.style.display='none';">
-                        <div class="profile-fallback">AS</div>
+                    <div class="profile-card">
+                        <div class="profile-circle">
+                            <img src="images/profile.jpg"
+                                 alt="Aashini Singh"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+
+                            <span class="profile-fallback">AS</span>
+                        </div>
+
+                        <h3>Aashini Singh</h3>
+                        <p>Frontend Developer</p>
+
+                        <div class="profile-tags">
+                            <span>Creative</span>
+                            <span>Curious</span>
+                            <span>Developer</span>
+                        </div>
                     </div>
 
-                    <div class="floating-label">
-                        <i class="fas fa-code"></i>
-                        <span>Build. Learn. Improve.</span>
+                    <div class="floating-badge badge-one">
+                        <i class="fa-solid fa-code"></i>
+                        Web Development
+                    </div>
+
+                    <div class="floating-badge badge-two">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        CSE Student
                     </div>
                 </div>
 
@@ -110,304 +154,324 @@
         </section>
 
 
-        <!-- ABOUT -->
-        <section id="about" class="section">
+        <!-- ABOUT SECTION -->
+        <section class="section" id="about">
             <div class="container">
 
                 <div class="section-heading reveal">
                     <p class="eyebrow">GET TO KNOW ME</p>
-                    <h2>About <span>Me</span></h2>
-                    <p>My interests, learning journey and goals.</p>
+                    <h2>About <span class="gradient-text">Me</span></h2>
+                    <p>A little introduction about my journey and interests.</p>
                 </div>
 
-                <div class="about-layout reveal">
-                    <div class="about-symbol">
-                        <i class="fas fa-laptop-code"></i>
+                <div class="about-grid">
+
+                    <div class="about-card reveal">
+                        <div class="about-icon">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+
+                        <h3>Who Am I?</h3>
+
+                        <p>
+                            I am a Computer Science and Engineering student at
+                            NIET, Greater Noida. I am interested in web development,
+                            problem-solving and building useful software projects.
+                        </p>
+
+                        <p>
+                            I enjoy learning by building projects, experimenting
+                            with new ideas and improving my technical skills
+                            through practical experience.
+                        </p>
                     </div>
 
-                    <div class="about-text">
-                        <h3>Curious Mind. Creative Builder.</h3>
+                    <div class="about-card highlight-card reveal">
+                        <div class="about-icon">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+
+                        <h3>My Goal</h3>
 
                         <p>
-                            I'm a Computer Science and Engineering student at
-                            NIET, Greater Noida. I'm interested in frontend
-                            development, data structures and algorithms, and
-                            software development.
+                            My goal is to become a skilled software developer
+                            by strengthening my programming fundamentals,
+                            exploring modern technologies and creating
+                            meaningful digital experiences.
                         </p>
 
-                        <p>
-                            I enjoy creating user-friendly interfaces and
-                            learning how technology can solve practical
-                            problems. My internship and projects help me
-                            practise coding, debugging and version control.
-                        </p>
-
-                        <div class="about-points">
-                            <span><i class="fas fa-check-circle"></i> Web Development</span>
-                            <span><i class="fas fa-check-circle"></i> Problem Solving</span>
-                            <span><i class="fas fa-check-circle"></i> Continuous Learning</span>
+                        <div class="mini-stat">
+                            <span class="stat-number">01</span>
+                            <span class="stat-label">Learn, Build, Improve</span>
                         </div>
                     </div>
-                </div>
 
+                </div>
             </div>
         </section>
 
 
-        <!-- SKILLS -->
-        <section id="skills" class="section section-alt">
+        <!-- SKILLS SECTION -->
+        <section class="section section-alt" id="skills">
             <div class="container">
 
                 <div class="section-heading reveal">
-                    <p class="eyebrow">MY TECHNICAL TOOLKIT</p>
-                    <h2>My <span>Skills</span></h2>
-                    <p>Technologies and concepts I practise and use.</p>
+                    <p class="eyebrow">WHAT I WORK WITH</p>
+                    <h2>My <span class="gradient-text">Skills</span></h2>
+                    <p>Technologies and concepts I am learning and practising.</p>
                 </div>
 
                 <div class="skills-grid">
 
                     <article class="skill-card reveal">
-                        <div class="card-icon">
-                            <i class="fas fa-code"></i>
+                        <div class="skill-icon html-icon">
+                            <i class="fa-brands fa-html5"></i>
                         </div>
-                        <h3>Programming</h3>
-                        <div class="tags">
-                            <span>C</span>
-                            <span>C++</span>
-                            <span>Python</span>
-                            <span>JavaScript</span>
-                        </div>
+                        <h3>HTML5</h3>
+                        <p>Semantic structure and accessible web pages</p>
                     </article>
 
                     <article class="skill-card reveal">
-                        <div class="card-icon">
-                            <i class="fas fa-palette"></i>
+                        <div class="skill-icon css-icon">
+                            <i class="fa-brands fa-css3-alt"></i>
                         </div>
-                        <h3>Frontend Development</h3>
-                        <div class="tags">
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>Flexbox</span>
-                            <span>CSS Grid</span>
-                            <span>Responsive Design</span>
-                        </div>
+                        <h3>CSS3</h3>
+                        <p>Responsive layouts, Flexbox and Grid</p>
                     </article>
 
                     <article class="skill-card reveal">
-                        <div class="card-icon">
-                            <i class="fas fa-diagram-project"></i>
+                        <div class="skill-icon js-icon">
+                            <i class="fa-brands fa-js"></i>
                         </div>
-                        <h3>Core CS &amp; DSA</h3>
-                        <div class="tags">
-                            <span>Data Structures</span>
-                            <span>Algorithms</span>
-                            <span>OOP</span>
-                            <span>DBMS Basics</span>
-                        </div>
+                        <h3>JavaScript</h3>
+                        <p>DOM manipulation and interactive features</p>
                     </article>
 
                     <article class="skill-card reveal">
-                        <div class="card-icon">
-                            <i class="fas fa-screwdriver-wrench"></i>
+                        <div class="skill-icon cpp-icon">
+                            <i class="fa-solid fa-code"></i>
                         </div>
-                        <h3>Tools</h3>
-                        <div class="tags">
-                            <span>VS Code</span>
-                            <span>Git</span>
-                            <span>GitHub</span>
-                            <span>MongoDB Compass</span>
+                        <h3>C / C++</h3>
+                        <p>Programming fundamentals and problem-solving</p>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-icon git-icon">
+                            <i class="fa-brands fa-git-alt"></i>
                         </div>
+                        <h3>Git & GitHub</h3>
+                        <p>Version control and project hosting</p>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-icon tools-icon">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+                        <h3>Developer Tools</h3>
+                        <p>VS Code and browser developer tools</p>
                     </article>
 
                 </div>
-
             </div>
         </section>
 
 
-        <!-- PROJECTS -->
-        <section id="projects" class="section">
+        <!-- PROJECTS SECTION -->
+        <section class="section" id="projects">
             <div class="container">
 
                 <div class="section-heading reveal">
-                    <p class="eyebrow">MY WORK</p>
-                    <h2>Featured <span>Projects</span></h2>
-                    <p>Academic and personal projects I've been working on.</p>
+                    <p class="eyebrow">SOME THINGS I HAVE BUILT</p>
+                    <h2>My <span class="gradient-text">Projects</span></h2>
+                    <p>A selection of my academic and development projects.</p>
                 </div>
 
                 <div class="projects-grid">
 
                     <article class="project-card reveal">
-                        <div class="project-top">
-                            <div class="card-icon">
-                                <i class="fas fa-droplet"></i>
+                        <div class="project-top project-blood">
+                            <i class="fa-solid fa-droplet"></i>
+                            <span>Project 01</span>
+                        </div>
+
+                        <div class="project-body">
+                            <h3>Smart Blood Bank Management System</h3>
+
+                            <p>
+                                A project focused on managing blood bank information
+                                and supporting blood donation workflows.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>Web Development</span>
+                                <span>Management System</span>
                             </div>
-                            <span class="project-type">Healthcare</span>
+
+                            <a href="https://github.com/aashini-singh/Smart_Blood_Bank_Management_System"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="project-link">
+                                View Repository
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
                         </div>
-
-                        <h3>Smart Blood Bank Management System</h3>
-                        <p>
-                            A project focused on organising blood donation
-                            information and helping connect donors with
-                            people who need blood.
-                        </p>
-
-                        <div class="tags">
-                            <span>Software Development</span>
-                            <span>Healthcare</span>
-                        </div>
-
-                        <a href="https://github.com/aashini-singh/Smart_Blood_Bank_Management_System"
-                           class="project-link" target="_blank"
-                           rel="noopener noreferrer">
-                            View Repository <i class="fas fa-arrow-up-right-from-square"></i>
-                        </a>
                     </article>
 
 
                     <article class="project-card reveal">
-                        <div class="project-top">
-                            <div class="card-icon">
-                                <i class="fas fa-city"></i>
+                        <div class="project-top project-utility">
+                            <i class="fa-solid fa-city"></i>
+                            <span>Project 02</span>
+                        </div>
+
+                        <div class="project-body">
+                            <h3>Smart Public Utility Complaint Management System</h3>
+
+                            <p>
+                                A project concept for organising public utility
+                                complaints and making complaint tracking more
+                                convenient.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>Problem Solving</span>
+                                <span>Public Services</span>
                             </div>
-                            <span class="project-type">Public Services</span>
+
+                            <a href="https://github.com/aashini-singh"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="project-link">
+                                Explore GitHub
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
                         </div>
-
-                        <h3>Smart Public Utility Complaint Management System</h3>
-                        <p>
-                            A project concept for organising public utility
-                            complaints and supporting a more structured
-                            tracking and resolution process.
-                        </p>
-
-                        <div class="tags">
-                            <span>Problem Solving</span>
-                            <span>System Design</span>
-                        </div>
-
-                        <!-- Replace with this project's actual repository URL -->
-                        <a href="https://github.com/aashini-singh"
-                           class="project-link" target="_blank"
-                           rel="noopener noreferrer">
-                            View Repository <i class="fas fa-arrow-up-right-from-square"></i>
-                        </a>
                     </article>
 
 
                     <article class="project-card reveal">
-                        <div class="project-top">
-                            <div class="card-icon">
-                                <i class="fas fa-mug-hot"></i>
+                        <div class="project-top project-coffee">
+                            <i class="fa-solid fa-mug-hot"></i>
+                            <span>Project 03</span>
+                        </div>
+
+                        <div class="project-body">
+                            <h3>CoffeePeelo</h3>
+
+                            <p>
+                                A coffee-themed website created to practise
+                                frontend design, page layouts and interactive
+                                web development.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
                             </div>
-                            <span class="project-type">Web Development</span>
+
+                            <a href="https://github.com/aashini-singh"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="project-link">
+                                Explore GitHub
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
                         </div>
-
-                        <h3>CoffeePeelo</h3>
-                        <p>
-                            A coffee-themed website created to practise
-                            webpage structure, styling, layout and
-                            JavaScript interactions.
-                        </p>
-
-                        <div class="tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-
-                        <!-- Replace with this project's actual repository URL -->
-                        <a href="https://github.com/aashini-singh"
-                           class="project-link" target="_blank"
-                           rel="noopener noreferrer">
-                            View Repository <i class="fas fa-arrow-up-right-from-square"></i>
-                        </a>
                     </article>
 
 
                     <article class="project-card reveal">
-                        <div class="project-top">
-                            <div class="card-icon">
-                                <i class="fas fa-hospital"></i>
+                        <div class="project-top project-hospital">
+                            <i class="fa-solid fa-hospital"></i>
+                            <span>Project 04</span>
+                        </div>
+
+                        <div class="project-body">
+                            <h3>Smart Hospital Management System</h3>
+
+                            <p>
+                                A programming project designed to organise
+                                basic hospital management operations.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>Data Handling</span>
                             </div>
-                            <span class="project-type">Python</span>
+
+                            <a href="https://github.com/aashini-singh"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="project-link">
+                                Explore GitHub
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
                         </div>
-
-                        <h3>Smart Hospital Management System</h3>
-                        <p>
-                            A console-based project for practising hospital
-                            record management, programming logic and
-                            data persistence.
-                        </p>
-
-                        <div class="tags">
-                            <span>Python</span>
-                            <span>JSON</span>
-                        </div>
-
-                        <!-- Replace with this project's actual repository URL -->
-                        <a href="https://github.com/aashini-singh"
-                           class="project-link" target="_blank"
-                           rel="noopener noreferrer">
-                            View Repository <i class="fas fa-arrow-up-right-from-square"></i>
-                        </a>
                     </article>
 
                 </div>
+
+                <p class="project-note">
+                    Note: Update the placeholder project links above with the
+                    actual repository URLs when available.
+                </p>
+
             </div>
         </section>
 
 
-        <!-- EDUCATION -->
-        <section id="education" class="section section-alt">
+        <!-- EDUCATION SECTION -->
+        <section class="section section-alt" id="education">
             <div class="container">
 
                 <div class="section-heading reveal">
-                    <p class="eyebrow">MY ACADEMIC JOURNEY</p>
-                    <h2>My <span>Education</span></h2>
+                    <p class="eyebrow">MY ACADEMIC BACKGROUND</p>
+                    <h2>My <span class="gradient-text">Education</span></h2>
+                    <p>The academic journey that supports my technical growth.</p>
                 </div>
 
-                <article class="education-card reveal">
-                    <div class="education-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
+                <div class="education-timeline">
 
-                    <div class="education-details">
-                        <span class="status-label">Currently Pursuing</span>
-                        <h3>Bachelor of Technology</h3>
-                        <h4>Computer Science and Engineering</h4>
-                        <p>Noida Institute of Engineering and Technology (NIET)</p>
-                        <p class="muted">
-                            <i class="fas fa-location-dot"></i>
-                            Greater Noida, Uttar Pradesh
-                        </p>
-                    </div>
-                </article>
+                    <article class="education-card reveal">
+                        <div class="education-icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+
+                        <div class="education-content">
+                            <span class="education-label">CURRENTLY PURSUING</span>
+                            <h3>Bachelor of Technology — Computer Science</h3>
+                            <h4>Noida Institute of Engineering and Technology (NIET)</h4>
+                            <p>Greater Noida, Uttar Pradesh</p>
+                        </div>
+                    </article>
+
+                </div>
 
             </div>
         </section>
 
 
-        <!-- RESUME -->
-        <section id="resume" class="section">
+        <!-- RESUME SECTION -->
+        <section class="section" id="resume">
             <div class="container">
 
-                <div class="resume-card reveal">
-                    <div class="resume-icon">
-                        <i class="fas fa-file-arrow-down"></i>
+                <div class="resume-box reveal">
+                    <div class="resume-content">
+                        <p class="eyebrow">LET'S CONNECT PROFESSIONALLY</p>
+                        <h2>Interested in my background?</h2>
+                        <p>
+                            View or download my resume to learn more about my
+                            education, skills and project experience.
+                        </p>
                     </div>
-
-                    <p class="eyebrow">MY RESUME</p>
-                    <h2>Let's Explore My Journey</h2>
-                    <p>
-                        Learn more about my education, skills, projects
-                        and development experience.
-                    </p>
 
                     <a href="resume/Aashini_Singh_Resume.pdf"
-                       class="btn"
-                       download="Aashini_Singh_Resume.pdf">
-                        <i class="fas fa-download"></i>
-                        Download Resume
+                       class="btn btn-primary"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                        View Resume
                     </a>
                 </div>
 
@@ -415,93 +479,120 @@
         </section>
 
 
-        <!-- CONTACT -->
-        <section id="contact" class="section section-alt">
+        <!-- CONTACT SECTION -->
+        <section class="section section-alt" id="contact">
             <div class="container">
 
                 <div class="section-heading reveal">
-                    <p class="eyebrow">LET'S CONNECT</p>
-                    <h2>Get In <span>Touch</span></h2>
-                    <p>
-                        Have a question or want to connect?
-                        Find me on the platforms below.
-                    </p>
+                    <p class="eyebrow">GET IN TOUCH</p>
+                    <h2>Contact <span class="gradient-text">Me</span></h2>
+                    <p>Have a project idea or want to connect? Reach out to me.</p>
                 </div>
 
-                <div class="contact-links reveal">
+                <div class="contact-grid">
 
-                    <a href="https://github.com/aashini-singh"
-                       class="contact-card"
-                       target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-github"></i>
-                        <span>GitHub</span>
-                        <small>Explore my repositories</small>
-                    </a>
+                    <div class="contact-info reveal">
+                        <h3>Let's talk!</h3>
 
-                    <!-- Replace with your actual LinkedIn profile URL -->
-                    <a href="https://www.linkedin.com/in/aashini-singh-46479643b"
-                       class="contact-card"
-                       target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-linkedin"></i>
-                        <span>LinkedIn</span>
-                        <small>Connect professionally</small>
-                    </a>
+                        <p>
+                            I am open to connecting with fellow developers,
+                            learning from new opportunities and collaborating
+                            on interesting projects.
+                        </p>
 
-                    <!-- Replace with your real email address -->
-                    <a href="mailto:aashinisingh77@gmail.com"
-                       class="contact-card">
-                        <i class="fas fa-envelope"></i>
-                        <span>Email</span>
-                        <small>Send me an email</small>
-                    </a>
+                        <!-- Replace with your real email address -->
+                        <a href="mailto:YOUR_EMAIL@gmail.com" class="contact-item">
+                            <span class="contact-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </span>
+                            <span>
+                                <strong>Email</strong>
+                                <small>YOUR_EMAIL@gmail.com</small>
+                            </span>
+                        </a>
+
+                        <a href="https://github.com/aashini-singh"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="contact-item">
+                            <span class="contact-icon">
+                                <i class="fa-brands fa-github"></i>
+                            </span>
+                            <span>
+                                <strong>GitHub</strong>
+                                <small>Explore my repositories</small>
+                            </span>
+                        </a>
+
+                        <!-- Replace with your actual LinkedIn profile URL -->
+                        <a href="https://www.linkedin.com/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="contact-item">
+                            <span class="contact-icon">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </span>
+                            <span>
+                                <strong>LinkedIn</strong>
+                                <small>Connect with me</small>
+                            </span>
+                        </a>
+                    </div>
+
+
+                    <div class="contact-form-card reveal">
+                        <form id="contactForm" novalidate>
+
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text"
+                                       id="name"
+                                       name="name"
+                                       placeholder="Enter your name"
+                                       autocomplete="name"
+                                       required>
+                                <small class="error-message" id="nameError"></small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email"
+                                       id="email"
+                                       name="email"
+                                       placeholder="Enter your email"
+                                       autocomplete="email"
+                                       required>
+                                <small class="error-message" id="emailError"></small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message"
+                                          name="message"
+                                          rows="5"
+                                          placeholder="Write your message (at least 10 characters)"
+                                          required></textarea>
+                                <small class="error-message" id="messageError"></small>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary form-button">
+                                Validate Message
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+
+                            <p class="success-message" id="successMessage"
+                               role="status" aria-live="polite"></p>
+
+                            <p class="form-note">
+                                This demo form validates your inputs but does not
+                                send messages. Email delivery requires a backend
+                                or a form service.
+                            </p>
+
+                        </form>
+                    </div>
 
                 </div>
-
-                <div class="contact-form-box reveal">
-                    <h3>Validate Your Message</h3>
-                    <p class="form-note">
-                        This demo validates the form in your browser.
-                        It does not send messages to an inbox.
-                    </p>
-
-                    <form id="contactForm" class="contact-form" novalidate>
-
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name"
-                                   placeholder="Enter your name"
-                                   autocomplete="name" required>
-                            <small id="nameError" class="error-message"></small>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Your Email</label>
-                            <input type="email" id="email" name="email"
-                                   placeholder="Enter your email"
-                                   autocomplete="email" required>
-                            <small id="emailError" class="error-message"></small>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" name="message" rows="5"
-                                      placeholder="Write at least 10 characters"
-                                      required></textarea>
-                            <small id="messageError" class="error-message"></small>
-                        </div>
-
-                        <button type="submit" class="btn form-button">
-                            Validate Message
-                            <i class="fas fa-arrow-right"></i>
-                        </button>
-
-                        <p id="successMessage"
-                           class="success-message"
-                           role="status" aria-live="polite"></p>
-
-                    </form>
-                </div>
-
             </div>
         </section>
 
@@ -510,21 +601,49 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container footer-inner">
+        <div class="container footer-content">
+
             <a href="#home" class="logo">Aashini<span>.</span></a>
 
-            <p>Designed and built by Aashini Singh.</p>
+            <p>
+                Designed and developed by Aashini Singh.
+            </p>
 
-            <a href="#home" class="back-to-top" aria-label="Back to top">
-                <i class="fas fa-arrow-up"></i>
-            </a>
+            <div class="footer-socials">
+                <a href="https://github.com/aashini-singh"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/aashini-singh-46479643b"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+
+                <a href="mailto:aashinisingh77@gmail.com"
+                   aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+
+            <p class="copyright">
+                &copy; <span id="currentYear"></span> Aashini Singh. All rights reserved.
+            </p>
+
         </div>
-
-        <p class="copyright">
-            &copy; 2026 Aashini Singh. All rights reserved.
-        </p>
     </footer>
 
+
+    <!-- Back to top -->
+    <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
     <script src="script.js"></script>
+
 </body>
 </html>
